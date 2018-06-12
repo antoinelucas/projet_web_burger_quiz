@@ -1,10 +1,33 @@
 <?php
 
 // Chargement des classes
-require_once('model/PostManager.php');
-require_once('model/CommentManager.php');
+//require_once('model/');
 
-function listPosts()
+function display_login(){
+  require_once('view/loginView.php');
+}
+
+function display_new_game(){
+  require_once('view/new_gameView.php');
+}
+
+function display_game(){
+  require_once('view/gameView.php');
+}
+
+function display_account(){
+  require_once('view/accountView.php');
+}
+
+function display_ranking(){
+  require_once('view/rankingView.php');
+}
+
+function display_logout(){
+  require_once('view/logoutView.php');
+}
+
+/*function affiche_header()
 {
     $postManager = new PostManager(); // Création d'un objet
     $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet
@@ -36,3 +59,4 @@ function addComment($postId, $author, $comment)
         header('Location: index.php?action=post&id=' . $postId);
     }
 }
+*/

@@ -1,40 +1,46 @@
 <?php
-require('controller/frontend.php');
 
-try { // On essaie de faire des choses
-    if (isset($_GET['action'])) {
-        if ($_GET['action'] == 'listPosts') {
-            listPosts();
-        }
-        elseif ($_GET['action'] == 'post') {
-            if (isset($_GET['id']) && $_GET['id'] > 0) {
-                post();
-            }
-            else {
-                // Erreur ! On arrête tout, on envoie une exception, donc au saute directement au catch
-                throw new Exception('Aucun identifiant de billet envoyé');
-            }
-        }
-        elseif ($_GET['action'] == 'addComment') {
-            if (isset($_GET['id']) && $_GET['id'] > 0) {
-                if (!empty($_POST['author']) && !empty($_POST['comment'])) {
-                    addComment($_GET['id'], $_POST['author'], $_POST['comment']);
-                }
-                else {
-                    // Autre exception
-                    throw new Exception('Tous les champs ne sont pas remplis !');
-                }
-            }
-            else {
-                // Autre exception
-                throw new Exception('Aucun identifiant de billet envoyé');
-            }
-        }
-    }
-    else {
-        listPosts();
-    }
+//require('test.php');
+
+if(session_status() == PHP_SESSION_NONE){
+  session_start();
 }
-catch(Exception $e) { // S'il y a eu une erreur, alors...
-    echo 'Erreur : ' . $e->getMessage();
+
+//-------------------------------------------- HEADER ------------------------------------------------------
+//require_once('view/templates/headerView.php');
+//-----------------------------------------------------------------------------------------------------------
+
+
+require('controller/controller.php');
+
+try {
+  if (isset($_GET['action'])) {
+    if ($_GET['action'] == 'display_login') {
+      display_login();
+    }elseif ($_GET['action'] == 'display_new_game') {
+      display_new_game();
+    }elseif ($_GET['action'] == 'display_game') {
+      display_game();
+    }elseif ($_GET['action'] == 'display_account') {
+      display_account();
+    }elseif ($_GET['action'] == 'display_ranking') {
+      display_ranking();
+    }elseif ($_GET['action'] == 'display_logout') {
+      display_logout();
+    }else{
+      display_login();
+    }
+    }else{
+      display_login();
+    }
+
+}catch(Exception $e) { // S'il y a eu une erreur, alors...
+  echo 'Erreur : ' . $e->getMessage();
 }
+
+
+//-------------------------------------------- FOOTER ------------------------------------------------------
+if (isset($_SESSION['auth'])){  // On affiche le footer si le user est loguer
+  require_once('view/templates/footerView.php');
+}
+//----------------------------------------------------------------------------------------------------------

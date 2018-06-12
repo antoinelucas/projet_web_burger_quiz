@@ -1,0 +1,192 @@
+body{
+  margin: 0;
+  /*user-select: none;  /*L'utilisateur ne peux pas sélectionner le texte de l'élément qui possède cette propriété CSS
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;*/
+  background-color: black;
+  color: white;
+
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------- style page header -----------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+#navbar_container{
+    display: flex;
+    justify-content: center;
+    margin-top:1rem;
+    margin-left: 10rem;
+}
+
+#nav_container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#nav_img_logo {
+width: 100%;
+}
+
+#menu_container{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: 6rem;
+}
+
+#menu_container img{
+  width: 100%;
+}
+
+.lien_container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- style page authentification --------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+#authentification_container{
+  display: flex;
+  color: black;
+}
+
+#authentification_display_container{
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  height:45rem;
+  margin-left: 17rem;
+  margin-top: 2rem;
+}
+
+#button_authent_container{
+  display:flex;
+  justify-content: space-around;
+  margin-left: 15.5rem;
+}
+
+#button_authent_container input{
+  font-size: 2.5rem;
+  color: white;
+}
+
+#button_authent_connexion{
+  background-color: #ce1c00;
+}
+
+#button_authent_register{
+  background-color: #edd101;
+}
+
+#rouge-selection{
+  z-index:2;
+  width: 25rem;
+  height: 25rem;
+  margin-left: 16rem;
+  background-color: #ce1c00;
+}
+
+#jaune-selection{
+  z-index:2;
+  width: 25rem;
+  height: 25rem;
+  margin-left: 48rem;
+  background-color: #edd101;
+}
+
+#onglet_container{
+  display: flex;
+  justify-content: space-between;
+  width: 50rem;
+  height:50rem;
+  margin-left: 35rem;
+  margin-top: 6rem;
+}
+
+/*---------------------------------------- login -----------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+#login_container{
+    background-color: white;
+    display: flex;
+}
+
+/*---------------------------------------- register --------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+#register_container{
+  background-color: white;
+  display: flex;
+}
+
+
+#photo_profil_container{
+  background-color: yellow;
+  display: flex;
+
+}
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- style page new game ----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+#new_gameView_container{
+  display: flex;
+  height: 50rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.select_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#new_gameView_container select{
+  width: 25rem;
+  margin-left: 2rem;
+}
+
+#button_new_game_container button{
+  margin-left: 10rem;
+  margin-right: 10rem;
+  padding: 1.5rem;
+  font-size: 3rem;
+  background-color: #ce1c00;
+  border-color: #ce1c00;
+}
+
+#button_seed_game_container button{
+  margin: 10rem;
+  padding: 1.5rem;
+  font-size: 3rem;
+  background-color: #edd101;
+  border-color: #edd101;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
