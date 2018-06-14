@@ -53,7 +53,7 @@ if(!empty($_POST)){
 
 
     unset($_SESSION['timer']);
-    $time_start = microtime_float();
+    $time_start = time();
     $_SESSION['timer'] = $time_start;
 
     header('Location: ../../index.php?action=display_game');

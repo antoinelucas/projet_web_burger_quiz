@@ -62,7 +62,7 @@ if(!empty($_POST)){
       $_SESSION['tab_propositions_game'] = $proposition_game;
 
       unset($_SESSION['timer']);
-      $time_start = microtime_float();
+      $time_start = time();
       $_SESSION['timer'] = $time_start;
 
       header('Location: ../../index.php?action=display_game');
