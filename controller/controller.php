@@ -15,6 +15,10 @@ function display_game(){
   require_once('view/gameView.php');
 }
 
+function display_end_game(){
+  require_once('view/end_gameView.php');
+}
+
 function display_account(){
   require_once('view/accountView.php');
 }

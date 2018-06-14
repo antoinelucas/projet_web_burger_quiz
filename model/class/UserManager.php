@@ -44,7 +44,6 @@ class UserManager extends Manager{
     $req->bindValue(':lastname', $user->getLastname());
     $req->bindValue(':vip', $user->getVip(), PDO::PARAM_INT);
     $req->bindValue(':avatar', $user->getAvatar());
-    $req->bindValue(':password', $user->getPassword());
     $req->bindValue(':pseudo', $user->getPseudo());
 
     $req->execute();

@@ -21,6 +21,8 @@ try {
       display_new_game();
     }elseif ($_GET['action'] == 'display_game') {
       display_game();
+    }elseif ($_GET['action'] == 'display_end_game') {
+      display_end_game();
     }elseif ($_GET['action'] == 'display_account') {
       display_account();
     }elseif ($_GET['action'] == 'display_ranking') {

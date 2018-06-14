@@ -29,7 +29,7 @@ if(!empty($_POST) && !empty($_POST['login']) && !empty($_POST['password'])){
         session_start();
       }
 
-      $_SESSION['auth'] = $user;
+      $_SESSION['auth'] = $user->getPseudo();
       unset($user_login);
       unset($user);
       unset($manager);

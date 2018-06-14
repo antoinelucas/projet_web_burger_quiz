@@ -1,4 +1,6 @@
 <?php
+require_once('model/treatments/logged_only.php');
+logged_only();
 
 require_once('model/treatments/join_game.php');
 

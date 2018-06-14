@@ -89,7 +89,7 @@ class User{
   }
 
   public function setAvatar($avatar){
-    if(!is_string($avatar) && !strlen($avatar) <= 50){
+    if((is_string($avatar) && strlen($avatar) <= 50) || !isset($avatar)){
       $this->_avatar = htmlspecialchars($avatar);
     }else {
       $this->_manager->setError('avatar', "Le lien pour l'avatar n'est pas valide ! Le lien doit être une chaine de 50 caractères maximun.");

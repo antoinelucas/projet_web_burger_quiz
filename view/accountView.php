@@ -1,4 +1,7 @@
 <?php
+require_once('model/treatments/function.php');
+logged_only();
+
 $img_tab0 = '<img src="public/img/burger_menu.png" alt="photo_login1">';
 $img_tab1 = '<img src="public/img/burger_menu.png" alt="photo_login1">';
 $img_tab2 = '<img src="public/img/burger_menu_select.png" alt="photo_login1">';

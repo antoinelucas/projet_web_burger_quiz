@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "burger_font";
+  src: url('burger_font.ttf');
+}
+
+
+
+
+
+
+
+
 body{
   margin: 0;
   /*user-select: none;  /*L'utilisateur ne peux pas sélectionner le texte de l'élément qui possède cette propriété CSS
@@ -18,7 +30,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top:1rem;
-    margin-left: 10rem;
+    margin-left: 5rem;
 }
 
 #nav_container{
@@ -81,7 +93,7 @@ width: 100%;
 }
 
 #button_authent_container input{
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -114,7 +126,7 @@ width: 100%;
   justify-content: space-between;
   width: 50rem;
   height:50rem;
-  margin-left: 35rem;
+  margin-left: 20rem;
   margin-top: 6rem;
 }
 
@@ -190,3 +202,10 @@ width: 100%;
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+#world_ranking{
+  width: 50%;
+  margin-left: 5rem;
+  color: black;
+}

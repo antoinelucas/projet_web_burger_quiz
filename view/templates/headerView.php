@@ -20,7 +20,7 @@
       <div id="menu_container">
         <div class="lien_container">
           <a class="navbar-brand" href="?action=display_new_game"><?= $img_tab0 ?></a>
-          <a class="navbar-brand" href="?action=display_new_game">Jouer une partie</a>
+          <a class="navbar-brand" href="?action=display_new_game">Jouer</a>
         </div>
         <div class="lien_container">
           <a class="navbar-brand" href="?action=display_ranking"><?= $img_tab1 ?></a>

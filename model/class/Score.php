@@ -1,7 +1,16 @@
 <?php
+require_once("Manager.php");
+require_once('ScoreManager.php');
+
+
 class Score{
   private $_miams;
   private $_temps;
+  private $_manager;
+
+  function __construct(){
+    $this->_manager = new Manager();
+  }
 
   //-------------------------------------- Méthode d'hydratation ---------------------------------------------------------
     public function hydrate(array $data){
@@ -27,7 +36,7 @@ class Score{
   }
 
   public function setTemps($temps){
-      $this->_temps = $temps;
+      $this->_temps = (float) $temps;
   }
   //-----------------------------------------------------------------------------------------------------------------------
 

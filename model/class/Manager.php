@@ -1,4 +1,5 @@
 <?php
+
 class Manager{
   //attributs
   private $_db;
@@ -44,8 +45,5 @@ class Manager{
     }
     return $db;
   }
-
-
-
 
 }
