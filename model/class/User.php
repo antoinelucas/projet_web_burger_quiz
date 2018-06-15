@@ -1,4 +1,13 @@
 <?php
+/**
+* \file      User.php
+* \author    Antoine Lucas
+* \version   1.0
+* \date      15 Juin 2018
+* \brief     User.php est la classe relative à la table User dans la BDD
+*
+*/
+
 require_once("Manager.php");
 require_once('UserManager.php');
 
@@ -13,11 +22,20 @@ class User{
   private $_avatar;
   private $_manager;
 
+  /**
+  * \brief      constructeur qui instancie un Manager (de la classe Manager.php)
+  * \details    permet de déclarer des erreurs
+  */
   function __construct(){
     $this->_manager = new Manager();
   }
 
 
+  /**
+  * \brief     méthode permettant "d'hydrater" tout les setters
+  * \details   retoune une erreur si la connexion échoue
+  * \param    $data         requière un tableau associatif avec comme cléfs les noms des setters. (souvent un retour de la base de données)
+  */
   //-------------------------------------- Méthode d'hydratation ---------------------------------------------------------
   public function hydrate(array $data){
     foreach ($data as $key => $value) {
@@ -30,6 +48,9 @@ class User{
   //-----------------------------------------------------------------------------------------------------------------------
 
 
+  /**
+  * \brief       getter
+  */
   //getters
   public function getPseudo(){return $this->_pseudo;}
   public function getPassword(){return $this->_password;}
@@ -39,6 +60,10 @@ class User{
   public function getVip(){return $this->_vip;}
   public function getAvatar(){return $this->_avatar;}
 
+
+  /**
+  * \brief       setter
+  */
   //---------------------------------------- setters -----------------------------------------------------------------------
   public function setPseudo($pseudo){
     if(is_string($pseudo) && strlen($pseudo) <= 50 && preg_match('/^[a-zA-Z0-9_]+$/', $pseudo)){  //l'identifiant est une chaine de caractères de 50 caractères max

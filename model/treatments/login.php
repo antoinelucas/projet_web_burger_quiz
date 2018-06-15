@@ -12,11 +12,6 @@ $manager = new UserManager();
 $user = new User();
 
 if(!empty($_POST) && !empty($_POST['login']) && !empty($_POST['password'])){
-  /*$user_login = ["pseudo" => $_POST['login']];
-  //$user_login['pseudo'] = $_POST['login'];
-  $user_login['mail'] = $_POST['login'];
-  $user_login['password'] = $_POST['password'];*/
-
   $user_login = $manager->loginUser($_POST['login']);
 
   if($user_login){
