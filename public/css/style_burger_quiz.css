@@ -1,21 +1,10 @@
-@font-face {
-  font-family: "burger_font";
-  src: url('burger_font.ttf');
-}
-
-
-
-
-
-
-
 
 body{
   margin: 0;
-  /*user-select: none;  /*L'utilisateur ne peux pas sélectionner le texte de l'élément qui possède cette propriété CSS
+  user-select: none;  /*L'utilisateur ne peux pas sélectionner le texte de l'élément qui possède cette propriété CSS*/
   -moz-user-select: none;
   -khtml-user-select: none;
-  -webkit-user-select: none;*/
+  -webkit-user-select: none;
   background-color: black;
   color: white;
 
@@ -74,84 +63,63 @@ width: 100%;
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 #authentification_container{
   display: flex;
+  flex-direction: row;
   color: black;
+  background-image: url(../img/icone_burger.png);
+  background-repeat: no-repeat;
+  background-position:center;
 }
 
 #authentification_display_container{
   display: flex;
   flex-direction: column;
-  width: 50rem;
-  height:45rem;
-  margin-left: 17rem;
-  margin-top: 2rem;
+  align-items: center;
 }
 
-#button_authent_container{
-  display:flex;
-  justify-content: space-around;
-  margin-left: 15.5rem;
+#onglet_container #alert-form-container{
+    margin-top: 15rem;
+    margin-right: 17rem;
 }
 
-#button_authent_container input{
-  font-size: 2rem;
-  color: white;
-}
-
-#button_authent_connexion{
-  background-color: #ce1c00;
-}
-
-#button_authent_register{
-  background-color: #edd101;
-}
-
-#rouge-selection{
-  z-index:2;
-  width: 25rem;
-  height: 25rem;
-  margin-left: 16rem;
-  background-color: #ce1c00;
-}
-
-#jaune-selection{
-  z-index:2;
-  width: 25rem;
-  height: 25rem;
-  margin-left: 48rem;
-  background-color: #edd101;
+.alert-dismissible.alert-success, .alert-dismissible.alert-success .alert-link, .alert-dismissible.alert-success .close::before{
+  height: 5rem;
+  margin-top: 17rem;
 }
 
 #onglet_container{
-  display: flex;
+  display:flex;
+  flex-direction: row;
   justify-content: space-between;
-  width: 50rem;
-  height:50rem;
-  margin-left: 20rem;
-  margin-top: 6rem;
+  width: 93rem;
 }
-
-/*---------------------------------------- login -----------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------*/
 
 #login_container{
-    background-color: white;
-    display: flex;
+  background-color: white;
+  height: 20rem;
+  margin-left: 5rem;
+  margin-top: 10rem;
 }
 
-/*---------------------------------------- register --------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------*/
 
 #register_container{
   background-color: white;
-  display: flex;
+  height: 44rem;
+  margin-top: 1rem;
 }
 
-
-#photo_profil_container{
-  background-color: yellow;
-  display: flex;
-
+#login_container button{
+  background-color: #edd101;
+  color: black;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
 }
+
+#register_container button{
+  background-color: #ce1c00;
+  color: black;
+  margin-left: 7rem;
+}
+
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------*/
@@ -161,42 +129,60 @@ width: 100%;
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------- style page new game ----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------*/
-
+#errors{
+  display: flex;
+}
 #new_gameView_container{
   display: flex;
-  height: 50rem;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  margin: 2rem;
+  margin-top: 3rem;
+
+  background-image: url(../img/seloupoivre.png);
+  background-repeat: no-repeat;
+  background-position:center;
+
+  height: 20rem;
   flex-wrap: wrap;
 }
 
 
-.select_container{
+#button_new_game_container{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#new_gameView_container select{
+  flex-direction: column;
+  align-items: center;
   width: 25rem;
-  margin-left: 2rem;
+  margin: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
 }
 
 #button_new_game_container button{
-  margin-left: 10rem;
-  margin-right: 10rem;
-  padding: 1.5rem;
-  font-size: 3rem;
+  margin-top: 2rem;
+  font-size: 2rem;
   background-color: #ce1c00;
   border-color: #ce1c00;
 }
 
+#button_seed_game_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+  margin: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
 #button_seed_game_container button{
-  margin: 10rem;
-  padding: 1.5rem;
-  font-size: 3rem;
+  margin-top: 2rem;
+  font-size: 2rem;
   background-color: #edd101;
   border-color: #edd101;
+}
+
+#new_game #alert-form-container{
+  margin-right: 15rem;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
@@ -205,16 +191,172 @@ width: 100%;
 
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------- style page ranking --------------------------------------------------------------*/
+/*--------------------------------------- style page new game ----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+#game_jumbotron{
+  margin: 3rem;
+  border-color: #edd101;
+}
+
+#game_container{
+  display: flex;
+  flex-direction: column;
+}
+
+#question_propositions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem;
+}
+#game_question{
+  margin: 2rem;
+}
+
+
+#answer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#game_answer{
+  width: 50rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+#game_answer button{
+  font-size: 2rem;
+}
+#game_button1{
+  background-color: #edd101;
+  border-color: #edd101;
+}
+#game_button2{
+  background-color: #3367a3;
+  border-color: #3367a3;
+}
+#game_button3{
+  background-color: #ce1c00;
+  border-color: #ce1c00;
+}
+
+#game_score{
+  width: 15rem;
+  margin-right: 3rem;
+}
+
+/*----------------------------------timer------------------------------------------------------------------------------------------*/
+@import "compass/css3";
+
+#progress-bar {
+	position:relative;
+  border:1px solid rgba(0,0,0,0.8);
+  width:0;
+  height:20px;
+  /*margin:80px 0 0 80px;*/
+  background:repeating-linear-gradient(-45deg, #ce1c00, #ce1c00 20px, #edd101 20px, #edd101 40px);
+  border-radius:0.8em;
+  animation: roll 20s linear infinite;
+  box-shadow:
+    inset 0 10px 10px rgba(255,255,255,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 -5px 3px rgba(0,0,0,0.2),
+    0 3px 2px rgba(0,0,0,0.3);
+}
+
+#progress-bar:after {
+ 	width:300px;
+	height:28px;
+  border:1px solid rgba(0,0,0,0.8);
+  background:#333;
+  border-radius:1em;
+  display:block;
+  content:"";
+  position:absolute;
+  left:-5px;
+  top:-5px;
+  z-index:-1;
+}
+
+@-moz-keyframes roll {
+	0% { width:0; }
+  100% { width:290px; }
+}
+
+@-webkit-keyframes roll {
+	0% { width:0; }
+  100% { width:290px; }
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- style page end_game --------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 
 
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+#game_ranking_container{
+  display: flex;
+  margin: 5rem;
+  margin-left: 8rem;
+  align-items: center;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- style page ranking --------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+#ranking_container{
+  display: flex;
+  margin: 5rem;
+  margin-left: 5rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#user_best_score{
+}
+
 #world_ranking{
   width: 50%;
-  margin-left: 5rem;
   color: black;
 }
 
 #world_ranking h2{
   color: white;
 }
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- style footer --------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+#footer{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#footer_content{
+  margin-right: 15rem;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/

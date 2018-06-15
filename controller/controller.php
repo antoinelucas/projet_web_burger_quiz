@@ -31,6 +31,10 @@ function display_logout(){
   require_once('view/logoutView.php');
 }
 
+function dispaly_mentions(){
+  require_once('view/mentions.php');
+}
+
 /*function affiche_header()
 {
     $postManager = new PostManager(); // Création d'un objet

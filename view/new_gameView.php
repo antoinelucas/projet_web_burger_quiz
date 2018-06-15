@@ -11,9 +11,8 @@ $img_tab2 = '<img src="public/img/burger_menu.png" alt="photo_login1">';
 $img_tab3 = '<img src="public/img/burger_menu.png" alt="photo_login1">';
 require_once('templates/headerView.php');
 ?>
-
-<section id="new_gameView_container">
-
+<section id="new_game">
+<section id="errors">
   <?php
   if(!empty($_SESSION['errors'])): ?>
   <hr>
@@ -33,16 +32,20 @@ require_once('templates/headerView.php');
 <?php endif;
 unset($_SESSION['errors']);
 ?>
+</section>
+
+<section id="new_gameView_container">
+
+  <form action="model/treatments/create_game.php" method="POST" id="button_new_game_container">
+    <div  class="select_container"class="form-group">
+      <label class="col-form-label" for="inputDefault"><h3>Nom de la partie</h3></label>
+      <input class="form-control" name="partie_nom" placeholder="partie1" id="inputDefault" type="text">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Créer une partie</button>
+  </form>
 
 
-<form action="model/treatments/create_game.php" method="POST" id="button_new_game_container">
-  <div  class="select_container"class="form-group">
-    <label class="col-form-label" for="inputDefault">Nom de la partie</label>
-    <input class="form-control" name="partie_nom" placeholder="partie1" id="inputDefault" type="text">
-  </div>
-
-  <button type="submit" class="btn btn-primary">Créer une partie</button>
-</form>
 
 <form action="model/treatments/launch_game.php" method="POST" id="button_seed_game_container">
   <div class="select_container" class="form-group">
@@ -58,4 +61,5 @@ unset($_SESSION['errors']);
   <button type="submit" class="btn btn-primary">Rejoindre une partie</button>
 </form>
 
+</section>
 </section>

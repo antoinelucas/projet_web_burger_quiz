@@ -29,6 +29,8 @@ try {
       display_ranking();
     }elseif ($_GET['action'] == 'display_logout') {
       display_logout();
+    }elseif ($_GET['action'] == 'display_mentions') {
+        dispaly_mentions();
     }else{
       display_login();
     }

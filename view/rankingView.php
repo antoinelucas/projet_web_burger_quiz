@@ -18,7 +18,7 @@ require_once('templates/headerView.php');
   </article>
 
   <article id="world_ranking">
-    <h2>Top 10 mondiale</h2>
+    <h2>Top 5 mondiale</h2>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -31,7 +31,7 @@ require_once('templates/headerView.php');
       </thead>
       <tbody>
         <tr class="table-active">
-          <?php for($i=0; $i < 10; $i++){ ?>
+          <?php for($i=0; $i < 5; $i++){ ?>
             <th scope="row"><?= $score_world[$i]['id_partie'] ?></th>
             <td><?= $score_world[$i]['pseudo'] ?></td>
             <td><?= $score_world[$i]['miams'] ?></td>

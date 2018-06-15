@@ -1,4 +1,5 @@
 <?php
+require_once('constants.php');
 
 class Manager{
   //attributs
@@ -36,7 +37,8 @@ class Manager{
   //méthodes
   protected function dbConnect(){
     try{
-      $db = new PDO('mysql:host=localhost;dbname=burgerquiz;charset=utf8', 'burgerquiz', 'quizburger');
+      $db = new PDO('mysql:host='.DB_SERVER.';dbname='.DB_NAME.';charset=utf8',
+        DB_USER, DB_PASSWORD);
     }
     catch(PDOException $e){
       echo "<div class='alert alert-danger'><strong>Erreur!</strong> Il est impossible de se connecter à la BDD.</div>";

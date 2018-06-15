@@ -5150,15 +5150,15 @@ input[type="button"].btn-block {
 }
 
 .jumbotron {
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 0rem;
   background-color: transparent;
   border-radius: 555px 25px 15px 25px/25px 5px 35px 555px;
 }
 
 @media (min-width: 576px) {
   .jumbotron {
-    padding: 4rem 2rem;
+    padding: 1rem 1rem;
   }
 }
 
